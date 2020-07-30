@@ -1,0 +1,6 @@
+mutation RootMutation($responseAnswerInput: ResponseAnswerInput!) {
+  submitResponse(responseAnswerInput: $responseAnswerInput) {
+    id
+    date
+  }
+}

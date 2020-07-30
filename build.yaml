@@ -1,0 +1,25 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - graphql/**
+      - my.schema.graphql
+    builders:
+      artemis:
+        options:
+          schema_mapping:
+            - schema: my.schema.graphql
+              queries_glob: graphql/token.query.graphql
+              output: lib/graphql/token/token_query.dart
+            - schema: my.schema.graphql
+              queries_glob: graphql/get_all_quiz.query.graphql
+              output: lib/graphql/get_all_quiz/get_all_quiz_query.dart
+            - schema: my.schema.graphql
+              queries_glob: graphql/submit_response.mutation.graphql
+              output: lib/graphql/submit_response/submit_response_mutation.dart
+            - schema: my.schema.graphql
+              queries_glob: graphql/get_results.query.graphql
+              output: lib/graphql/get_results/get_results_query.dart
+            - schema: my.schema.graphql
+              queries_glob: graphql/add_result.mutation.graphql
+              output: lib/graphql/add_result/add_result_mutation.dart

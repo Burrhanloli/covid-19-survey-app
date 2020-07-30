@@ -1,0 +1,7 @@
+mutation RootMutation($quizId: ID!) {
+  addResult(quizId: $quizId) {
+    id
+    is_high_risk
+    date
+  }
+}

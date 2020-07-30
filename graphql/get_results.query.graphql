@@ -1,0 +1,7 @@
+query RootQuery {
+  getResultsForUser {
+    id
+    is_high_risk
+    date
+  }
+}

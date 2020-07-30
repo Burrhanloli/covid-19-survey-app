@@ -1,0 +1,15 @@
+query RootQuery {
+  getAllQuiz {
+    id
+    text
+    questions {
+      id
+      text
+      question_type
+      answers {
+        id
+        text
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+query RootQuery($mobile: String!) {
+  getToken(mobile: $mobile) {
+    userId
+    token
+    tokenExpiration
+  }
+}
