@@ -81,7 +81,8 @@ class LoginPage extends StatelessWidget {
       context.bloc<AuthCubit>().login(phone, context);
 
       FlushbarHelper.createLoading(
-          message: "Logging in", linearProgressIndicator: null);
+              message: "Logging in", linearProgressIndicator: null)
+          .show(context);
     }
   }
 }

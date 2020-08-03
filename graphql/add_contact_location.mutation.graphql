@@ -1,0 +1,6 @@
+mutation RootMutation($userContactLocationInput: UserContactLocationInput!) {
+  addUserContactLocation(userContactLocationInput: $userContactLocationInput) {
+    id
+    date
+  }
+}

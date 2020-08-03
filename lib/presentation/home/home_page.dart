@@ -43,6 +43,7 @@ class HomePage extends StatelessWidget {
                     child: child,
                   );
                 }),
+                const SizedBox(height: 20,),
                 Container(
                   width: double.infinity,
                   child: FlatButton(

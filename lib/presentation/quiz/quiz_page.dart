@@ -29,6 +29,7 @@ class QuizPage extends StatelessWidget {
                 children: <Widget>[
                   const Text("Previous Results"),
                   const ResultsList(),
+                  const SizedBox(height:20),
                   Container(
                     width: double.infinity,
                     child: FlatButton(

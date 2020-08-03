@@ -28,7 +28,7 @@ class ResultsList extends StatelessWidget {
             );
           } else {
             child = Container(
-              height: maxHeight * 0.75,
+              height: maxHeight * 0.7,
               child: ListView.builder(
                 itemCount: results.length,
                 itemBuilder: (BuildContext context, int index) {

@@ -60,10 +60,8 @@ class AnswerPage extends StatelessWidget {
                       },
                       onSelected: (selected) {
                         selectedAnswers = [];
-                        selected.forEach((element) {
-                          final id = idMap[element];
-                          selectedAnswers.add(id);
-                        });
+                        selectedAnswers =
+                            selected.map((text) => idMap[text]).toList();
                       },
                     ),
                   if (questions[index].question_type == "RADIO")
@@ -102,7 +100,9 @@ class AnswerPage extends StatelessWidget {
                             selectedAnswers, context, questions, index);
                       },
                       color: Theme.of(context).primaryColor,
-                      child: const Text("Next"),
+                      child: index == questions.length - 1
+                          ? const Text("Submit")
+                          : const Text("Next"),
                     ),
                   )
                 ],

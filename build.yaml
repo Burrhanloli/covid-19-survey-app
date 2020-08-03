@@ -23,3 +23,6 @@ targets:
             - schema: my.schema.graphql
               queries_glob: graphql/add_result.mutation.graphql
               output: lib/graphql/add_result/add_result_mutation.dart
+            - schema: my.schema.graphql
+              queries_glob: graphql/add_contact_location.mutation.graphql
+              output: lib/graphql/add_contact_location/add_contact_location_mutation.dart

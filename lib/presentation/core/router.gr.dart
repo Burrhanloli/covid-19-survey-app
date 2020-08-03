@@ -81,8 +81,11 @@ class Router extends RouterBase {
       );
     },
     ResultPage: (data) {
+      var args = data.getArgs<ResultPageArguments>(
+        orElse: () => ResultPageArguments(),
+      );
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const ResultPage(),
+        builder: (context) => ResultPage(key: args.key),
         settings: data,
       );
     },
@@ -116,7 +119,13 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
         arguments: AnswerPageArguments(quiz: quiz),
       );
 
-  Future<dynamic> pushResultPage() => push<dynamic>(Routes.resultPage);
+  Future<dynamic> pushResultPage({
+    Key key,
+  }) =>
+      push<dynamic>(
+        Routes.resultPage,
+        arguments: ResultPageArguments(key: key),
+      );
 }
 
 /// ************************************************************************
@@ -133,4 +142,10 @@ class QuizPageArguments {
 class AnswerPageArguments {
   final RootQuery$RootQuery$Quiz quiz;
   AnswerPageArguments({@required this.quiz});
+}
+
+/// ResultPage arguments holder class
+class ResultPageArguments {
+  final Key key;
+  ResultPageArguments({this.key});
 }
